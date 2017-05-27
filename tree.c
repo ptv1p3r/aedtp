@@ -85,7 +85,7 @@ void printLongestPath(TREE tree, int* path, int len, int depth){
     len++;
     depth--;
 
-    if ( depth == -1 ) {                                // max depth da root to leaf
+    if (depth == -1) {                                 // max depth da root to leaf
         printPath(path, len);
         return;
     }
@@ -94,6 +94,11 @@ void printLongestPath(TREE tree, int* path, int len, int depth){
     printLongestPath(tree->right, path, len, depth);    // percorre a direita recursivamente
 }
 
+/**
+ * Metodo que imprime o path
+ * @param path Array com o path da tree
+ * @param len Tamanho do array a imprimir
+ */
 void printPath(int* path, int len) {
     for ( int i = 0; i < len; i++ ){
         if (i!=0) printf("->");
