@@ -156,16 +156,16 @@ int main()
     write_eps_header(file_ptr, "lines", width, height);
 
 
-    ITEM it1 = create_item(10, 'a');//
-    ITEM it2 = create_item(2, 'b');//
+    ITEM it1 = create_item(10, 'a');
+    ITEM it2 = create_item(2, 'b');
     ITEM it3 = create_item(23, 'c');
     ITEM it4 = create_item(17, 'd');
-    ITEM it5 = create_item(16, 'e');//
+    ITEM it5 = create_item(16, 'e');
     ITEM it6 = create_item(18, 'f');
     ITEM it7 = create_item(21, 'w');
     ITEM it8 = create_item(11, 'y');
-    ITEM it9 = create_item(14, 'u');//
-    ITEM it10 = create_item(1, 'v');//
+    ITEM it9 = create_item(14, 'u');
+    ITEM it10 = create_item(1, 'v');
 
 
     TREE root = create_node(it1); // root
@@ -178,7 +178,7 @@ int main()
     insert(left, create_node(it5), create_node(it4));
     insert(right, create_node(it8), create_node(it6));
     insert(get_left(left), create_node(it10), create_node(it7));
-    //insert(get_left(get_left(left)), create_node(it9), NULL);
+    insert(get_left(get_left(left)), create_node(it9), NULL);
     //insert(get_right(get_left(left)), create_node(it9), NULL);
 
     //print_tree(root);
