@@ -178,8 +178,8 @@ int main()
     insert(left, create_node(it5), create_node(it4));
     insert(right, create_node(it8), create_node(it6));
     insert(get_left(left), create_node(it10), create_node(it7));
-    //insert(get_left(get_left(left)), create_node(it9), NULL);
-    insert(get_right(get_left(left)), create_node(it9), NULL);
+    insert(get_left(get_left(left)), create_node(it9), NULL);
+    //insert(get_right(get_left(left)), create_node(it9), NULL);
 
     //print_tree(root);
 
@@ -189,7 +189,6 @@ int main()
 
     int* path = (int*) malloc(sizeof(int) * get_tree_height(root));
     printLongestPath(root,path,0,get_tree_height(root));
-
 
     return 0;
 
