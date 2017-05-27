@@ -69,31 +69,37 @@ void print_tree(TREE tree)
 	}
 }
 
+/**
+ * Metodo que imprime o caminho mais longo de uma tree desde a root ate a leaf inclusive
+ * @param tree Arvore binaria
+ * @param path Array que guard o caminho na tree
+ * @param len Valor que indica o index
+ * @param depth Tamanho da tree
+ */
 void printLongestPath(TREE tree, int* path, int len, int depth){
 
     if (tree == NULL) return;
 
-    path[len] = get_item_sat(tree->item); // valor para o path
+    path[len] = get_item_sat(tree->item);               // valor para o path
 
     len++;
     depth--;
 
-    if ( depth == -1 ) { // // max depth da root to leaf
-        printPath(path, len, depth);
+    if ( depth == -1 ) {                                // max depth da root to leaf
+        printPath(path, len);
         return;
     }
 
-    printLongestPath(tree->left, path, len, depth);
-    printLongestPath(tree->right, path, len, depth);
+    printLongestPath(tree->left, path, len, depth);     // percorre a esquerda recursivamente
+    printLongestPath(tree->right, path, len, depth);    // percorre a direita recursivamente
 }
 
-void printPath(int* path, int len, int depth) {
+void printPath(int* path, int len) {
     int i;
     for ( i = 0; i < len; i++ ){
         if (i!=0) printf("->");
         printf("%c",path[i]);
     }
-    if (i==len) printf(" or ");
 }
 
 
