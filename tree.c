@@ -95,11 +95,11 @@ void printLongestPath(TREE tree, int* path, int len, int depth){
 }
 
 void printPath(int* path, int len) {
-    int i;
-    for ( i = 0; i < len; i++ ){
+    for ( int i = 0; i < len; i++ ){
         if (i!=0) printf("->");
         printf("%c",path[i]);
     }
+    printf("\n");
 }
 
 
