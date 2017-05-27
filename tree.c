@@ -72,7 +72,7 @@ void print_tree(TREE tree)
 /**
  * Metodo que imprime o caminho mais longo de uma tree desde a root ate a leaf inclusive
  * @param tree Arvore binaria
- * @param path Array que guard o caminho na tree
+ * @param path Array que guarda o caminho na tree
  * @param len Valor que indica o index
  * @param depth Tamanho da tree
  */
