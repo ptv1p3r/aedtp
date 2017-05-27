@@ -188,8 +188,7 @@ int main()
     printf("Tree height = %d \n", get_tree_height(root));
 
     int* path = (int*) malloc(sizeof(int) * get_tree_height(root));
-    int len = 0;
-    printLongestPath(root,path,len,get_tree_height(root));
+    printLongestPath(root,path,0,get_tree_height(root));
 
 
     return 0;
